@@ -1,13 +1,11 @@
-<html>
-    <head>
-        <title>Sean's Blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">SCC Blog</a></h1>
-        </div>
-        <div>
-        {{ posts }}
-        </div>
-    </body>
-</html>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
