@@ -1,0 +1,26 @@
+{% extends 'base.html' %)
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<html>
+<head>
+    <style>
+        login-pass {
+            color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class="login-pass">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
+2qw3srd4ex
